@@ -1,0 +1,13 @@
+{% extends 'pages/index.html' %}
+
+{% block title %}Confirm Delete Author{% endblock %}
+
+{% block content %}
+    <h1>Confirm Delete Author</h1>
+    <p>Are you sure you want to delete "{{ author.name }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+        <a href="{% url 'author_list' %}">Cancel</a>
+    </form>
+{% endblock %}

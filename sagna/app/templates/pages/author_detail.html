@@ -1,0 +1,15 @@
+{% extends 'pages/index.html' %}
+
+{% block title %}Author Detail{% endblock %}
+
+{% block content %}
+    <h1>Author Detail</h1>
+    <p>Name: {{ author.name }}</p>
+    <p>Birth Date: {{ author.birth_date }}</p>
+    <p>Country: {{ author.country }}</p>
+    <p>
+        <a href="{% url 'author_update' author.pk %}">Edit</a> |
+        <a href="{% url 'author_delete' author.pk %}">Delete</a>
+    </p>
+    <a href="{% url 'author_list' %}">Back to Author List</a>
+{% endblock %}

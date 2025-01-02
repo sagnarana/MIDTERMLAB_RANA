@@ -1,0 +1,13 @@
+/* static/css/style.css */
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px; /* Adjust this value to move the logo up or down */
+}
+
+.logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+}
